@@ -1,7 +1,10 @@
 # Typescript starting guide
 
 ```
-    npm install typescript -g
+    npm install
 
-    tsc Person.ts
+    tsc
+
+    npm install -g serve
+    serve
 ```
