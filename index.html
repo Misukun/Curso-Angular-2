@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Typescript test</title>
+</head>
+<body>
+
+    <style>
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin: 10px 0;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            border-bottom: 1px solid gray;
+            padding: 5px;
+        }
+    </style>
+
+    <h1>Tech list</h1>
+
+    <form id="technology">
+
+        <div class="form-group">
+            <label for="name">Technology</label>
+            <input id="name" type="text">
+        </div>
+
+        <div class="form-group">
+            <label for="years">Years</label>
+            <input id="years" type="number">
+        </div>
+        <input id="add" type="submit" value="Add">
+    </form>
+
+    <h2 id="teacherName"> </h2>
+    <ul id="techList"></ul>
+    <script data-main="dist/app" type="text/javascript" src="./node_modules/requirejs/require.js"></script>
+</body>
+</html>

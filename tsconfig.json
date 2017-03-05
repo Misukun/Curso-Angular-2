@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "module": "amd",
+    "outDir": "dist",
+    "target": "es5"
+  },
+  "files": [
+    "src/app.ts",
+    "src/Person.ts",
+    "src/Teacher.ts"
+  ]
+}
