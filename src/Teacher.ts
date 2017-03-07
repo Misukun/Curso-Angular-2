@@ -7,11 +7,8 @@ export interface Expertise {
 
 export class Teacher extends Person {
 
-    private expertiseAreas: Array<Expertise>;
-
-    constructor(name:string, surname:string, expertiseAreas:Array<Expertise> ) {
+    constructor(name:string, surname:string, private expertiseAreas:Array<Expertise> ) {
         super(name, surname);
-        this.expertiseAreas = expertiseAreas
     }
 
     addExpertise(expertise:Expertise) {

@@ -16,5 +16,6 @@ let add = (name:string, years:number) => {
 document.querySelector('#add').addEventListener('click', (ev) =>  {
     var name = (<HTMLInputElement>document.querySelector('#name')).value;
     var years = parseInt((<HTMLInputElement>document.querySelector('#years')).value);
+    (<HTMLFormElement>document.querySelector('#technology')).reset();
     add(name, years);
 });
