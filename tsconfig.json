@@ -7,7 +7,7 @@
   },
   "files": [
     "src/app.ts",
-    "src/Person.ts",
-    "src/Teacher.ts"
+    "src/ChatRoom.ts",
+    "src/Messages.interface.ts"
   ]
 }

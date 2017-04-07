@@ -1,21 +1,35 @@
-import { Teacher, Expertise } from './Teacher';
+//app.ts
 
-let newTeacher: Teacher = new Teacher('Jon', 'Rojí', []);
+import {ChatRoom} from "./ChatRoom";
+import {Message} from "Messages.interface";
 
-let add = (name:string, years:number) => {
+let chatRoom = new ChatRoom('Fictizia room');
 
-    let newExpertise:Expertise = {
-        expertise: name,
-        yearsOfExperience: years
+document.querySelector("#chatName").innerHTML = chatRoom.chatName;
+
+let username = (<HTMLInputElement>document.querySelector("#username"));
+let message = (<HTMLInputElement>document.querySelector("#message"));
+let messagesList = document.querySelector("#messageList");
+
+document.querySelector("#add").addEventListener('click', (ev) => {
+
+    let userMessage: Message = {
+        username: username.value,
+        message: message.value,
+        date: new Date()
     };
 
-    newTeacher.addExpertise(newExpertise);
-    document.querySelector('#techList').innerHTML += `<li>${newExpertise.expertise} - ${newExpertise.yearsOfExperience}</li>`
-};
+    chatRoom.addMessage(userMessage);
 
-document.querySelector('#add').addEventListener('click', (ev) =>  {
-    var name = (<HTMLInputElement>document.querySelector('#name')).value;
-    var years = parseInt((<HTMLInputElement>document.querySelector('#years')).value);
-    (<HTMLFormElement>document.querySelector('#technology')).reset();
-    add(name, years);
+    let messages = chatRoom.messages;
+
+    let result = '';
+    messages.forEach((el) => {
+        result = `${result}<li>${el.username}:${el.message}</li>`
+    });
+
+    messagesList.innerHTML = result;
 });
+
+
+
