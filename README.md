@@ -3,8 +3,8 @@
 ```
     npm install
 
-    tsc
+    npm run tsc
 
-    npm install -g serve
-    serve
+    npm run serve
+
 ```
